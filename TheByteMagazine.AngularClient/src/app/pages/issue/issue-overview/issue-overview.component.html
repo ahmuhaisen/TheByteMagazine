@@ -1,0 +1,32 @@
+<app-issue-summary />
+
+<div class="mt-8">
+    <p class="text-xl font-bold text-primary-dark border-l-4 border-secondary pl-4">
+        Description
+    </p>
+    <p class="mt-4 text-gray-500">
+        {{ issue()!.description }}
+    </p>
+</div>
+
+<div class="mt-8">
+    <p class="text-xl font-bold text-primary-dark border-l-4 border-secondary pl-4">
+        Director Note
+    </p>
+    <p class="mt-4 text-gray-500">
+        {{ issue()!.directorNote }}
+    </p>
+</div>
+
+<div class="mt-8">
+    <p class="text-xl font-bold text-primary-dark border-l-4 border-secondary pl-4">
+        Articles in this issue
+    </p>
+    
+    @defer (on viewport) {
+        <app-issue-articles [articles]="issueArticles()"/>
+    } @placeholder {
+        <p>Loading articles...</p>
+    }
+
+</div>

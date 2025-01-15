@@ -1,0 +1,14 @@
+<app-loader [show]="!isFetched()" />
+
+<app-page-header [title]="pageTitle" [description]="pageDescription" />
+
+@if(isFetched()){
+    <div class="flex justify-center my-10">
+        <div class="w-10/12 grid grid-cols-1 md:grid-cols-2 gap-5">
+            <app-latest-issue-baner [issue]="latestIssue" class="col-span-2" />
+            @for(issue of allIssues; track issue.id) {
+                <app-issue-card [issue]="issue" class="col-span-2 lg:col-span-1"/>
+            }
+        </div>
+    </div>
+}

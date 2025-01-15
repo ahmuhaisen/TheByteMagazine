@@ -1,0 +1,45 @@
+.gradient-fade {
+  position: relative;
+}
+
+.gradient-fade::before,
+.gradient-fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gradient-fade::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(239 246 255), rgba(255, 255, 255, 0));
+}
+
+.gradient-fade::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(239 246 255), rgba(255, 255, 255, 0));
+}
+
+/* Default for large screens */
+.gradient-fade::before,
+.gradient-fade::after {
+  width: 250px;
+}
+
+/* For medium screens (md) */
+@media (max-width: 1024px) {
+  .gradient-fade::before,
+  .gradient-fade::after {
+    width: 100px;
+  }
+}
+
+/* For small screens (sm) */
+@media (max-width: 768px) {
+  .gradient-fade::before,
+  .gradient-fade::after {
+    width: 5px;
+  }
+}

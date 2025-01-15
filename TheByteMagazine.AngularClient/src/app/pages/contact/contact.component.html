@@ -1,0 +1,65 @@
+<section>
+
+  <app-page-header [title]="pageTitle" [description]="pageDescription" />
+
+  <div class="flex justify-center min-h-full bg-white mb-5">
+    <div class="w-10/12">
+      <div class="w-100 grid md:grid-cols-2 gap-20 mt-10">
+        <div>
+          <div
+            class="p-4 shadow-md rounded-lg bg-blue-50 transition ease-in-out delay-50 hover:-translate-y-2 hover:scale-102 duration-200">
+            <span class="inline-block p-2 text-secondary rounded-lg bg-blue-100 ">
+              <i class="bi bi-envelope w-5"></i>
+            </span>
+
+            <h2 class="mt-4 text-base font-semibold text-primary-dark ">E-Mail Us</h2>
+            <p class="mt-2 text-sm text-gray-500 ">info&#64;thebytemagazine.com</p>
+          </div>
+
+          <div
+            class="p-4 mt-5 shadow-md rounded-lg bg-blue-50 transition ease-in-out delay-50 hover:-translate-y-2 hover:scale-102 duration-200">
+            <span class="inline-block p-2 text-secondary rounded-lg bg-blue-100 ">
+              <i class="bi bi-door-closed w-5"></i>
+            </span>
+
+            <h2 class="mt-4 text-base font-semibold text-primary-dark ">Visit Our Office</h2>
+            <p class="mt-2 text-sm text-gray-500 ">Byte Tower, Techno Park, University Avenue, Campus City</p>
+          </div>
+
+          <div
+            class="p-4 mt-5 shadow-md rounded-lg bg-blue-50 transition ease-in-out delay-50 hover:-translate-y-2 hover:scale-102 duration-200">
+            <span class="inline-block p-2 text-secondary rounded-lg bg-blue-100 ">
+              <i class="bi bi-at"></i>
+            </span>
+
+            <h2 class="mt-4 text-base font-semibold text-primary-dark ">Follow Us</h2>
+            <p class="mt-2 text-md w-1/2 text-gray-500 flex items-center gap-3">
+              <a routerLink="/" class="hover:text-primary-dark">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a routerLink="/" class="hover:text-primary-dark">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a routerLink="/" class="hover:text-primary-dark">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a routerLink="/" class="hover:text-primary-dark">
+                <i class="bi bi-youtube"></i>
+              </a>
+              <a routerLink="/" class="hover:text-primary-dark">
+                <i class="bi bi-discord"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="w-full p-8 mx-auto overflow-hidden bg-blue-50 rounded-lg shadow-md lg:max-w-xl">
+            <h1 class="text-lg font-semibold text-primary-dark">What do you want to ask?</h1>
+            <app-contact-form />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,6 @@
+@TheByteMagazine.WebAPI_HostAddress = http://localhost:5263
+
+GET {{TheByteMagazine.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

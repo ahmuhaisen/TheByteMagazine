@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper-header-lg {
+  background-image: url(../public/bg1.png);
+  background-position-y: -2px;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: 15%;
+}
+
+.wrapper-header-sm {
+  background-image: url(../public/bg2.png);
+  background-position-y: bottom;
+  background-position-x: left;
+  background-repeat: no-repeat;
+  background-size: 8%;
+}
+
+button .arrow,
+a .arrow {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  margin-left: 1px;
+}
+
+button:hover .arrow,
+a:hover .arrow {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+[formgroupname].ng-invalid.ng-touched.ng-dirty label,
+.control:has(.ng-invalid.ng-touched.ng-dirty) label {
+  color: #f98b75;
+}
+
+[formgroupname].ng-invalid.ng-touched.ng-dirty input,
+input.ng-invalid.ng-touched.ng-dirty,
+textarea.ng-invalid.ng-touched.ng-dirty {
+  background-color: #fbdcd6;
+  border-color: #f84e2c;
+}
+
+/* Sweet Alert Customizations */
+
+div:where(.swal2-icon).swal2-error,
+div:where(.swal2-icon).swal2-info,
+div:where(.swal2-icon).swal2-question,
+div:where(.swal2-icon).swal2-success .swal2-success-ring,
+div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-long {
+  border-color: #b8bb34 !important;
+  color: #b8bb34 !important;
+}
+
+div:where(.swal2-icon).swal2-error [class^="swal2-x-mark-line"] {
+  background-color: #b8bb34 !important;
+}
+
+div:where(.swal2-container) h2:where(.swal2-title) {
+  color: #1d4f91 !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+  background-color: #b8bb34 !important;
+}
+
+/* End Sweet Alert Customizations */
+
+/* PAGE HEADER COMPONENT */
+
+.page-header {
+  background-image: url(../public/page-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position-y: top;
+}
+
+/* END PAGE HEADER COMPONENT */
+
+/* BREADCRUMB COMPONENT CUSTOMIZATIONS */
+
+.xng-breadcrumb-trail {
+  font-weight: 600 !important;
+}
+
+.xng-breadcrumb-link:hover {
+  text-decoration: none !important;
+  color: #72d8f7;
+}
+
+/* END OF BREADCRUMB COMPONENT CUSTOMIZATIONS */
+

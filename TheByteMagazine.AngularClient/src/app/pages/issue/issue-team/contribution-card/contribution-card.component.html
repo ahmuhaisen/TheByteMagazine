@@ -1,0 +1,21 @@
+<div class="mt-4 w-full bg-white border border-gray-200 rounded-lg shadow ">
+    <div class="flex flex-col items-center py-5">
+        <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" [src]="contribution().personalImageUrl ?? 'user-placefolder.jpg'" alt="image" />
+        <h5 class="mb-1 text-xl font-medium text-gray-900">{{contribution().fullName}}</h5>
+        <span class="text-sm px-2 rounded-md  text-white" [class]="
+            {
+             'bg-red-400': contribution().role == 'Director',
+             'bg-blue-400': contribution().role == 'EditorInChief',
+             'bg-secondary' : contribution().role != 'EditorInChief' && contribution().role != 'Director'
+            }">
+            {{contribution().role}}
+        </span>
+        <div class="flex mt-2 md:mt-4">
+            <a [href]="contribution().linkedInProfileUrl" target="_blank"
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-primary-dark-2 rounded-lg hover:bg-primary-light focus:ring-2 focus:outline-none focus:ring-secondary/50 ">
+                <i class="bi bi-linkedin mr-2"></i>
+                Profile
+            </a>
+        </div>
+    </div>
+</div>

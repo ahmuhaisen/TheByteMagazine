@@ -1,0 +1,60 @@
+<section id="top-contributors" class="w-full h-fit flex justify-center my-10 bg-blue-50 py-5">
+    <div class="w-10/12 h-full rounded-md">
+        <p class="pl-3 text-2xl font-bold text-primary-dark-2 border-l-8 rounded-md border-secondary ">
+            Top Contributors
+        </p>
+
+        <div class="w-full mt-5 relative gradient-fade">
+            <swiper-container
+              [speed]="1000"
+              [slidesPerView]="3"
+              [spaceBetween]="30"
+              [centeredSlides]="true"
+              [loop]="true"
+              autoplay="true"
+              [parallax]="true"
+              [breakpoints]="{
+                '640': { slidesPerView: 1, spaceBetween: 20 },
+                '768': { slidesPerView: 2, spaceBetween: 30 },
+                '1024': { slidesPerView: 3, spaceBetween: 40 }
+              }"
+              class="w-full h-full"
+            >
+              @for (volunteer of topContributors(); track $index) {
+                <swiper-slide>
+                  <div class="h-50 md:h-full bg-white border border-gray-200 rounded-lg p-3">
+                    <div class="grid grid-cols-12">
+                      <div class="h-full md:col-span-3 col-span-full flex flex-col justify-center items-center">
+                        <img
+                          class="w-16 h-16 rounded-full shadow-lg object-cover"
+                          loading="lazy"
+                          [src]="volunteer.personalImageUrl ?? 'user-placefolder.jpg'"
+                          alt="image"
+                        />
+                      </div>
+                      <div class="md:col-span-9 col-span-full flex flex-col justify-center items-center md:items-start space-y-4 md:space-y-0">
+                        <p class="mb-2 text-lg font-semibold text-primary-dark">
+                          {{ volunteer.fullName }}
+                        </p>
+                        <div class="">
+                          <a
+                            [href]="volunteer.linkedInProfileUrl"
+                            target="_blank"
+                            class="inline-flex items-center px-2 py-1 text-sm font-medium text-center text-white bg-primary-dark-2 rounded-lg hover:bg-primary-light focus:ring-2 focus:outline-none focus:ring-secondary/50 "
+                          >
+                            <i class="bi bi-linkedin mr-2"></i>
+                            Profile
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </swiper-slide>
+              }
+            </swiper-container>
+          </div>
+          
+
+
+    </div>
+</section>

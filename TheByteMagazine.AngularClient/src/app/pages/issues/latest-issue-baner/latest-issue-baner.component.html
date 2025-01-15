@@ -1,0 +1,27 @@
+<a routerLink="../issue/{{ issue().id }}" class="w-full h-auto p-4 grid grid-cols-12 gap-4 transition ease-in-out duration-350 bg-blue-50 rounded-md shadow-md group">
+    <!-- Left Section -->
+    <div class="h-auto p-4 col-span-full sm:col-span-7 flex flex-col justify-between">
+        <div class="grid grid-cols-1 gap-4">
+            <p class="flex flex-wrap gap-2">
+                <span class="w-fit text-white text-xs sm:text-sm font-light bg-secondary px-2 py-1 rounded-lg">Latest Issue</span>
+                <span class="w-fit text-white text-xs sm:text-sm font-light bg-primary-light px-2 py-1 rounded-lg">{{ issue().publishedAt | date }}</span>
+            </p>
+            <p class="text-2xl sm:text-3xl lg:text-5xl font-bold text-primary-dark leading-tight">{{ issue().title }}</p>
+            <p class="text-xs sm:text-sm text-gray-500 mt-2 h-auto">{{ issue().description }}</p>
+        </div>
+        <div class="mt-4">
+            <a routerLink="../issue/{{ issue().id }}" class="text-xs sm:text-sm text-secondary rounded-md transition">
+                View Details
+                <i class="arrow"><i class="bi bi-arrow-right"></i></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="h-auto col-span-full sm:col-span-5 relative overflow-hidden">
+        <img [src]="issue().coverImageUrl" alt="Issue Cover" class="w-full h-64 sm:h-100 rounded-md object-cover transform transition-transform duration-300 group-hover:scale-105">
+        <p class="text-xs sm:text-sm w-fit p-1 text-center rounded-md bg-primary-light text-white absolute top-2 right-2">
+            Issue #{{ issue().number }} | {{ issue().year }}
+        </p>
+    </div>
+</a>

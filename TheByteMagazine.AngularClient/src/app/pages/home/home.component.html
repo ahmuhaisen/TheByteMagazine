@@ -1,0 +1,21 @@
+<app-hero />
+
+<app-latest-issue />
+
+@defer (on viewport) {
+    <app-top-contributors />
+} @placeholder {
+    <app-section-loader />
+}
+
+@defer (on viewport) {
+    <app-issues-slider />
+} @placeholder {
+    <app-section-loader />
+}
+
+@defer (on viewport) {
+    <app-editorial-office />
+} @placeholder {
+    <app-section-loader />
+}

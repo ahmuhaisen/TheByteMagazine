@@ -1,0 +1,32 @@
+<a routerLink="../issue/{{ issue().id }}" 
+    class="block w-full h-auto mx-auto overflow-hidden bg-zinc-50 rounded-md shadow-md lg:max-w-xl hover:shadow-lg transition-shadow">
+
+    <div class="w-full h-auto grid grid-cols-1 sm:grid-cols-12">
+        <!-- Image Section -->
+        <div class="p-2 col-span-full sm:col-span-4 relative group transform hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+            <img 
+                [src]="issue().coverImageUrl" 
+                [alt]="issue().title" 
+                class="w-full h-40 sm:h-44 lg:h-52 rounded-md object-cover">
+            <p 
+                class="absolute top-4 left-4 text-xs px-2 py-1 text-center rounded-md bg-blue-400 text-white">
+                {{ issue().year }}
+            </p>
+        </div>
+
+        <!-- Text Section -->
+        <div class="p-3 col-span-full sm:col-span-8 flex flex-col justify-between">
+            <div>
+                <p class="w-fit text-white text-xs font-light bg-secondary/85 px-2 py-1 rounded-lg mb-2">
+                    Issue #{{ issue().id }}
+                </p>
+                <p class="font-semibold text-primary-dark truncate">
+                    {{ issue().title }}
+                </p>
+                <p class="text-sm text-zinc-400 mt-2 line-clamp-3">
+                    {{ issue().description | slice:0:100 }}
+                </p>
+            </div>
+        </div>
+    </div>
+</a>

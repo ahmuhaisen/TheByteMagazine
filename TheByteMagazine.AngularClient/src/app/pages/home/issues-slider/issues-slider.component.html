@@ -1,0 +1,44 @@
+<section id="issues" class="w-full h-fit mb-10">
+    <div class="flex justify-center">
+        <div class="flex justify-between w-10/12 h-full my-5">
+            <div class="rounded-md">
+                <p class="pl-3 text-2xl font-bold text-primary-dark-2 border-l-8 rounded-md border-secondary">
+                    Recent Issues
+                </p>
+            </div>
+            <a routerLink="issues" class="text-primary-dark-2 bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium hover:text-secondary transition duration-300 ease-in-out rounded-lg text-sm px-5 py-2.5 text-center">
+                See all
+                <i class="arrow bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="relative">
+        <swiper-container [speed]="1000" [slidesPerView]="7" [grabCursor]="true" [loop]="true" autoplay="true" [breakpoints]="{ 
+                '640': { slidesPerView: 1, spaceBetween: 0 },
+                '768': { slidesPerView: 4, spaceBetween: 0 }, 
+                '1024': { slidesPerView: 7, spaceBetween: 0 } }" class="w-full h-full">
+
+            @for (issue of issues; track $index) {
+            <swiper-slide class="relative group">
+                <img [src]="issue.coverImageUrl" alt="" loading="lazy" class="h-72 md:h-full object-cover " />
+
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
+                    <div>
+                        <p class="text-center font-semibold text-sm md:text-lg px-2">{{ issue.title }}</p>
+                        <div class="text-center mt-5">
+                            <a [routerLink]="['issue', issue.id]"
+                                class="text-center bg-black/35 border-2 border-white text-sm p-2 hover:bg-secondary/80 transition duration-150 ease-in-out">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            }
+
+        </swiper-container>
+
+    </div>
+</section>

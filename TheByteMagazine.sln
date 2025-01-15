@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{C62FE407-9221-4F7C-8026-7FC1895FB7F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheByteMagazine.WebAPI", "TheByteMagazine.WebAPI\TheByteMagazine.WebAPI.csproj", "{A6ED4FA0-CA83-4E3F-B8A7-D9BE064BCEA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheByteMagazine.Domain", "TheByteMagazine.Domain\TheByteMagazine.Domain.csproj", "{AA9B92E8-2ECC-464F-AEB7-F80EF73869AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheByteMagazine.Infrastructure", "TheByteMagazine.Infrastructure\TheByteMagazine.Infrastructure.csproj", "{9C8CE8AC-7CC1-4BA1-B3DC-8004D65AA1EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheByteMagazine.Application", "TheByteMagazine.Application\TheByteMagazine.Application.csproj", "{59FFA2C6-EBE1-49BE-95F0-D10F32D3A1DE}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "TheByteMagazine.AngularClient", "TheByteMagazine.AngularClient\TheByteMagazine.AngularClient.esproj", "{AB3154CE-47C2-4313-A1C6-8BB070B59ED4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6ED4FA0-CA83-4E3F-B8A7-D9BE064BCEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6ED4FA0-CA83-4E3F-B8A7-D9BE064BCEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6ED4FA0-CA83-4E3F-B8A7-D9BE064BCEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6ED4FA0-CA83-4E3F-B8A7-D9BE064BCEA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA9B92E8-2ECC-464F-AEB7-F80EF73869AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA9B92E8-2ECC-464F-AEB7-F80EF73869AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA9B92E8-2ECC-464F-AEB7-F80EF73869AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA9B92E8-2ECC-464F-AEB7-F80EF73869AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C8CE8AC-7CC1-4BA1-B3DC-8004D65AA1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8CE8AC-7CC1-4BA1-B3DC-8004D65AA1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8CE8AC-7CC1-4BA1-B3DC-8004D65AA1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8CE8AC-7CC1-4BA1-B3DC-8004D65AA1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59FFA2C6-EBE1-49BE-95F0-D10F32D3A1DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59FFA2C6-EBE1-49BE-95F0-D10F32D3A1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59FFA2C6-EBE1-49BE-95F0-D10F32D3A1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59FFA2C6-EBE1-49BE-95F0-D10F32D3A1DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB3154CE-47C2-4313-A1C6-8BB070B59ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB3154CE-47C2-4313-A1C6-8BB070B59ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB3154CE-47C2-4313-A1C6-8BB070B59ED4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AB3154CE-47C2-4313-A1C6-8BB070B59ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB3154CE-47C2-4313-A1C6-8BB070B59ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB3154CE-47C2-4313-A1C6-8BB070B59ED4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6ED4FA0-CA83-4E3F-B8A7-D9BE064BCEA5} = {C62FE407-9221-4F7C-8026-7FC1895FB7F2}
+		{AA9B92E8-2ECC-464F-AEB7-F80EF73869AA} = {C62FE407-9221-4F7C-8026-7FC1895FB7F2}
+		{9C8CE8AC-7CC1-4BA1-B3DC-8004D65AA1EE} = {C62FE407-9221-4F7C-8026-7FC1895FB7F2}
+		{59FFA2C6-EBE1-49BE-95F0-D10F32D3A1DE} = {C62FE407-9221-4F7C-8026-7FC1895FB7F2}
+	EndGlobalSection
+EndGlobal

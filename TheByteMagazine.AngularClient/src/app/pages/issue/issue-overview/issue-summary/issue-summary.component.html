@@ -1,0 +1,23 @@
+<div class="w-full grid grid-cols-1 md:grid-cols-4 gap-3">
+    <div class="w-full min-h-24 p-3 overflow-hidden shadow-md bg-blue-50 rounded-md">
+        <p class="text-xl font-bold text-gray-500">
+            <i class="bi bi-hash p-1 bg-blue-100 rounded-md"></i>
+            Issue No.
+        </p>
+        <p class="text-5xl text-center font-bold text-secondary mt-2">{{ issueService.currentIssue()?.number }}</p>
+    </div>
+    <div class="w-full min-h-24 p-3 overflow-hidden shadow-md bg-blue-50 rounded-md">
+        <p class="text-xl font-bold text-gray-500">
+            <i class="bi bi-calendar-check p-1 bg-blue-100 rounded-md"></i>
+            Publish date
+        </p>
+        <p class="text-2xl text-center font-extrabold text-secondary mt-4">{{ issueService.currentIssue()?.publishedAt | date }}</p>
+    </div>
+    <div class="w-full min-h-24 p-3 overflow-hidden shadow-md bg-blue-50 rounded-md">
+        <p class="text-xl font-bold text-gray-500">
+            <i class="bi bi-newspaper p-1 bg-blue-100 rounded-md"></i>
+            Articles
+        </p>
+        <p class="text-5xl text-center font-bold text-secondary mt-2">{{ issueService.currentIssueArticles()?.length }}</p>
+    </div>
+</div>

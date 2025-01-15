@@ -1,0 +1,41 @@
+<app-loader [show]="isSending()"/>
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="mt-6">
+    <div class="flex-1">
+        <label class="block mb-2 text-sm text-gray-600 ">Full Name</label>
+        <input formControlName="name" type="text" placeholder="(e.g.) John Doe"
+            class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-secondary focus:ring-opacity-40" />
+        @if(isControlInvalid('name')) {
+        <p class="text-red-400 text-sm">Name should be between 5 and 30 characters.</p>
+        }
+    </div>
+
+    <div class="flex-1 mt-6">
+        <label class="block mb-2 text-sm text-gray-600 ">E-Mail</label>
+        <input formControlName="email" type="text" placeholder="john&#64;example.com"
+            class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-secondary focus:ring-opacity-40" />
+        @if(isControlInvalid('email')) {
+        <p class="text-red-400 text-sm">Please enter a valid email.</p>
+        }
+    </div>
+
+
+    <div class="w-full mt-6">
+        <label class="block mb-2 text-sm text-gray-600">Message</label>
+        <textarea formControlName="message" rows="2" style="resize: none;"
+            class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-sm md:h-48 focus:outline-none focus:ring-1 focus:ring-secondary focus:ring-opacity-40"
+            placeholder="Your Message..."></textarea>
+        @if(isControlInvalid('message')) {
+        <p class="text-red-400 text-sm">Message should be at least 50 characters.</p>
+        }
+    </div>
+
+
+    <button 
+        #submitButton
+        type="submit"
+        class="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary-light rounded-md hover:bg-primary-dark-2 focus:outline-none focus:ring-1 focus:ring-secondary focus:ring-opacity-50">
+        Send
+        <i class="arrow bi bi-send"></i>
+    </button>
+</form>

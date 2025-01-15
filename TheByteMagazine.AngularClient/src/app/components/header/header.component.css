@@ -1,0 +1,15 @@
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #b8bb34;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}

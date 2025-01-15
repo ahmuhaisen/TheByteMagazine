@@ -1,0 +1,41 @@
+<app-page-header [title]="currentIssue()!.title" [description]="currentIssue()?.description" />
+
+<div class="flex justify-center my-5">
+    <div class="w-10/12">
+        <div class="grid grid-cols-12 gap-3">
+            <div class="col-span-full lg:col-span-2">
+                <div class="fw-64 h-fit">
+                    <div class="h-full px-3 py-4 overflow-y-auto bg-zinc-50 shadow-md rounded-md">
+                        <ul class="space-y-2 font-medium">
+                            <li>
+                                <a routerLink="./overview" routerLinkActive="active" 
+                                    class="flex items-center p-2 text-primary-dark rounded-lg hover:bg-secondary/30 group">
+                                    <i class="bi bi-info-circle"></i>
+                                    <span class="ms-3">Overview</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="./team" routerLinkActive="active" 
+                                    class="flex items-center p-2 text-primary-dark rounded-lg hover:bg-secondary/30 group">
+                                    <i class="bi bi-people"></i>
+                                    <span class="ms-3">Team</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="./read" routerLinkActive="active" 
+                                    class="flex items-center p-2 text-primary-dark rounded-lg hover:bg-secondary/30 group">
+                                    <i class="bi bi-book"></i>
+                                    <span class="flex-1 ms-3 whitespace-nowrap">Read</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="min-h-[85vh] col-span-full lg:col-span-10 pl-0 lg:pl-10">
+                <router-outlet class="w-full" />
+            </div>
+        </div>
+    </div>
+</div>
