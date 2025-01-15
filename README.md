@@ -20,4 +20,5 @@ Explore the live version of the application here:
 ## API Reference
 
 The API documentation can be accessed at:  
-👉 [API Reference](https://the-byte-magazine.runasp.net/swagger/index.html))  
+👉 [API Reference](https://the-byte-magazine.runasp.net/scalar/v1)
+
