@@ -1,5 +1,8 @@
 # TheByteMagazine
 
+![image](https://github.com/user-attachments/assets/c814c20e-0c98-441b-8e79-68da7a88f565)
+
+
 The Byte Magazine is a web application that serves as a comprehensive platform for technology enthusiasts, offering a curated selection of articles, issues, and insights in computer science and computing. The website is built with a robust technology stack, featuring an ASP.NET 8 Web API backend and an Angular-based frontend.
 
 ## Technologies Used
